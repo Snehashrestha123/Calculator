@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    background: linear-gradient(145deg, #2a2d3a, #1f2029);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 0 40px rgba(102, 126, 234, 0.4);
+    width: 340px;
+    border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.display {
+    margin-bottom: 15px;
+}
+
+#display {
+    width: 100%;
+    padding: 15px;
+    font-size: 2em;
+    text-align: right;
+    background: linear-gradient(145deg, #1a1d28, #2a2d3a);
+    color: #00ff9f;
+    border: 2px solid rgba(0, 255, 159, 0.2);
+    border-radius: 10px;
+    outline: none;
+    font-weight: bold;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+#display:focus {
+    border-color: rgba(0, 255, 159, 0.5);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 255, 159, 0.3);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.btn {
+    padding: 16px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.number-btn {
+    background: linear-gradient(145deg, #3a3f50, #2a2d3a);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 8px 16px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.number-btn:hover {
+    background: linear-gradient(145deg, #4a4f60, #3a3d4a);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 20px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.number-btn:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.operator-btn {
+    background: linear-gradient(145deg, #ff6b35, #e55a2b);
+    color: #fff;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    box-shadow: 
+        0 8px 16px rgba(255, 107, 53, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.operator-btn:hover {
+    background: linear-gradient(145deg, #ff7a4a, #f56a3a);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 20px rgba(255, 107, 53, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.operator-btn:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 4px 8px rgba(255, 107, 53, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.function-btn {
+    background: linear-gradient(145deg, #00d4ff, #00b8e6);
+    color: #000;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 
+        0 8px 16px rgba(0, 212, 255, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.function-btn:hover {
+    background: linear-gradient(145deg, #1ae5ff, #00c4ff);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 20px rgba(0, 212, 255, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.function-btn:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 4px 8px rgba(0, 212, 255, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.equals-btn {
+    background: linear-gradient(145deg, #00ff9f, #00cc7f);
+    color: #000;
+    border: 1px solid rgba(0, 255, 159, 0.3);
+    grid-column: span 2;
+    box-shadow: 
+        0 8px 16px rgba(0, 255, 159, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    font-size: 1.3em;
+}
+
+.equals-btn:hover {
+    background: linear-gradient(145deg, #1aff9f, #00ff8f);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 20px rgba(0, 255, 159, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.equals-btn:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 4px 8px rgba(0, 255, 159, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
